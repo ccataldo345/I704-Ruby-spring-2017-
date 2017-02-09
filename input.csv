@@ -1,0 +1,4 @@
+transaction_id,date,amount,credit
+1,2017-02-02 12:40,1.30,debit
+2,2017-02-02 12:55,2.50,debit
+3,2017-02-02 13:00,1.00,credit
