@@ -8,7 +8,7 @@ File.open('input.csv', 'r') do |the_file|
 	debit_total = ''
 	lines.each do |line|
 		debit_total = debit_total + line[2]
-	end
+  end
 
 	puts debit_total
 end
