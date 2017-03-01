@@ -1,0 +1,16 @@
+git clone https://github.com/ccataldo345/I704-Ruby-spring-2017-.git
+
+git init
+
+git add .   #(add to git repo all the new and modified files)
+
+git commit -m "Initial commit"
+
+git remote add origin https://github.com/ccataldo345/I704-Ruby-spring-2017-.git
+
+git add .gitignore 	#(add only 1 file)
+
+git commit -m 'Add gitignore'
+
+git push https://github.com/ccataldo345/I704-Ruby-spring-2017-.git
+
