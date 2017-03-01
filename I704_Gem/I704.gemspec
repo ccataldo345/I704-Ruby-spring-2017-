@@ -11,7 +11,11 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Write a short summary, because Rubygems requires one.}
   spec.description   = %q{Write a longer description or delete this line.}
+<<<<<<< HEAD
   spec.homepage      = "Put your gem's website or public repo URL here."
+=======
+  spec.homepage      = "http://localhost.localdomain"
+>>>>>>> 5473a23d3766c0ace4cfd57237af926193687932
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
