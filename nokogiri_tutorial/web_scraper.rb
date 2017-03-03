@@ -32,6 +32,7 @@ end
 (0..9).each do |i|
   puts "#{myranks[i]} #{mytitles[i]}"  #also: #puts "#{i+1}) #{mytitles[i]}"
   puts "   --> #{mylinks[i]}"           #also: #puts "   --> #{mylinks[i]}"
+  puts ""
 end
 
 #push array into a csv file
