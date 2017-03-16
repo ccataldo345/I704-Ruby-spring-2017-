@@ -32,13 +32,27 @@ puts("CHRISTIAN CATALDO - IT COLLEGE TALLINN - I704 RUBY - March 2017")
 puts("see result on webpage: http://localhost:8080/")
 puts("data scraped from: http://news.err.ee/k/news")
 
-#(0..9).each do |i|
-#  get '/' do
-#    "ERR NEWS: <br /><br /> #{i+1})#{mytitles[i]} <br /> --> <a href=#{mylinks[i]} target=_blank>#{mylinks[i]}</a>"
-#  end
-#  (0..9).each do |i|
-get '/' do
-  "CHRISTIAN CATALDO <br /> IT COLLEGE TALLINN - I704 RUBY - March 2017 <br /><br /> ERR.EE NEWS: <br /><br /> #{1})#{mytitles[0]} <br /> &emsp; --> <a href=#{mylinks[0]} target=_blank>#{mylinks[0]}</a> <br /><br />#{2})#{mytitles[1]} <br /> &emsp; --> <a href=#{mylinks[1]} target=_blank>#{mylinks[1]}</a> <br /><br />#{3})#{mytitles[2]} <br /> &emsp; --> <a href=#{mylinks[2]} target=_blank>#{mylinks[2]}</a> <br /><br /> *data scraped from <a href=http://news.err.ee/k/news target=_blank>news.err.ee/k/news</a>"
+def header
+  a ="<h2>CHRISTIAN CATALDO<br/>"
+  b ="<h3>IT COLLEGE TALLINN<br/>I704 RUBY<br/>March 2017</h3>"
+  c ="<h3><u>err.ee news:</u><br/><br/<br</h3>" 
+  result = [a, b, c]
+  result.join("\n")
 end
-#end
 
+def articles(titles, links)
+  result = (0..9).map do |i|
+  a ="<pre>#{i+1})#{titles[i]}<br/></pre>"
+  b ="<pre>   --> <a href=#{links[i]} target=_blank>#{links[i]}</a><br/><br/></pre>"
+  result = [a, b]
+  end
+  result.join("\n")
+end
+
+def footer
+  "<pre><br/><a href=http://news.err.ee/k/news target=_blank>*scraped from news.err.ee/k/news</pre>"
+end
+
+get '/' do
+  header + articles(mytitles, mylinks) + footer
+end

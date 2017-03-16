@@ -9,7 +9,7 @@ It consists of a small website where scraped news are displaied.
 USAGE
 -----
 
-`ruby ERR_Web.rb`
+`ruby err_web.rb`
 
 REQUIREMENTS
 -----

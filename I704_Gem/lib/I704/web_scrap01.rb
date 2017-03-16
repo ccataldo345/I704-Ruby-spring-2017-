@@ -13,35 +13,34 @@ module I704
   mytitles = []
   mylinks = []
 
-#this is where we parse the data
+  # this is where we parse the data
   parse_page.css('.right-block').map do |i|
     post_name = i.text
     mytimes.push(post_name)
   end
 
   parse_page.css('.category-news-header').map do |i|
-    post_name = i.text.gsub(/\s+/, " ")
+    post_name = i.text.gsub(/\s+/, ' ')
     mytitles.push(post_name)
   end
 
   parse_page.css('.category-news-header').css('a').map do |i|
-    post_name = i.attributes["href"]   #parse links only from '.storylink' class
+    post_name = i.attributes['href'] # parse links only from '.storylink' class
     mylinks.push(post_name)
   end
 
-#print result
+  # print result
   (0..9).each do |i|
-    #puts "#{mytimes[i]} #{mytitles[i]}"
-    puts "#{i+1})#{mytitles[i]}"
-    puts "   --> #{mylinks[i]}"           #also: #puts "   --> #{mylinks[i]}"
-    puts ""
+    # puts "#{mytimes[i]} #{mytitles[i]}"
+    puts "#{i + 1})#{mytitles[i]}"
+    puts "   --> #{mylinks[i]}" # also: #puts "   --> #{mylinks[i]}"
+    puts ''
   end
 
-#push array into a csv file
-#CSV.open('data.csv', 'w') do |csv|
-#	csv << data
-#end
+  # push array into a csv file
+  # CSV.open('data.csv', 'w') do |csv|
+  #	csv << data
+  # end
 
-# Pry.start(binding)
-
+  # Pry.start(binding)
 end
