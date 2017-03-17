@@ -14,9 +14,9 @@ USAGE
 REQUIREMENTS
 -----
 
-require 'sinatra'
-require 'httparty'
-require 'nokogiri'
-require 'json'
-require 'pry'
+require 'sinatra'<br/>
+require 'httparty'<br/>
+require 'nokogiri'<br/>
+require 'json'<br/>
+require 'pry'<br/>
 require 'csv'

@@ -9,13 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["ccataldo345"]
   spec.email         = ["christian.cataldo@itcollege.ee"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
-<<<<<<< HEAD
-  spec.homepage      = "Put your gem's website or public repo URL here."
-=======
-  spec.homepage      = "http://localhost.localdomain"
->>>>>>> 5473a23d3766c0ace4cfd57237af926193687932
+  spec.summary       = %q{news.err.ee web scraping}
+  spec.description   = %q{scrape news title from webpage}
+  spec.homepage      = "https://github.com/ccataldo345/I704-Ruby-spring-2017-.git"
+  spec.homepage      = "https://github.com/ccataldo345/I704-Ruby-spring-2017-.git"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -35,4 +32,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "sinatra", "~> 1.4.8"
+  spec.add_development_dependency "httparty", "~> 0.14.0"
+  spec.add_development_dependency "nokogiri", "~> 1.7.0.1"
 end
